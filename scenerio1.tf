@@ -32,7 +32,7 @@ variable "subnet_name" {
 
 variable "aws_image_size" {
   description = "AWS Image Instance Size"
-  default     = "t2.small"
+  default     = "t2.micro"
 }
 
 data "aws_subnet" "selected" {
@@ -56,19 +56,19 @@ variable "aws_image" {
   description = "AMI ID"
 }
 
-resource "aws_key_pair" "test_projectq2_microsoft2016" {
+resource "aws_key_pair" "test_projectq3_rhel" {
   key_name   = "${var.public_ssh_key_name}"
   public_key = "${var.public_ssh_key}"
 }
 
-resource "aws_instance" "test_projectq2_microsoft2016" {
+resource "aws_instance" "test_projectq3_rhel" {
   instance_type = "${var.aws_image_size}"
   ami           = "${var.aws_image}"
   subnet_id     = "${data.aws_subnet.selected.id}"
-  key_name      = "${aws_key_pair.test_projectq2_microsoft2016.id}"
+  key_name      = "${aws_key_pair.test_projectq3_rhel.id}"
   tags          = "${module.camtags.tagsmap}"
 }
 
 output "ip_address" {
-  value = "${length(aws_instance.test_projectq2_microsoft2016.public_ip) > 0 ? aws_instance.test_projectq2_microsoft2016.public_ip : aws_instance.test_projectq2_microsoft2016.private_ip}"
+  value = "${length(aws_instance.test_projectq3_rhel.public_ip) > 0 ? aws_instance.test_projectq3_rhel.public_ip : aws_instance.test_projectq3_rhel.private_ip}"
 }
