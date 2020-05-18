@@ -1,6 +1,6 @@
 {
-    "name": "Windows 2016 EC2 on AWS - ProjectQ",
-    "description": "AWS Windows example",
+    "name": "RHEL Bastion on AWS",
+    "description": "Red Hat Enterprise Linux bastion node on AWS",
     "version": "1.0",
     "imageUrl": "./assets/svg/IBM_WebSphere_Standalone.svg",
     "image": "tp_WAS_standalone.png",
@@ -25,7 +25,7 @@
     "metadata": {
       "displayName": "Amazon EC2 Virtual Server with SSH Key - HCL",
       "providerDisplayName": "IBM",
-      "longDescription": "Use this cloud resource template to quickly provision a Ubuntu 14.04 64 bit virtual server with ssh key into an existing Virtual Private Cloud (VPC) and on an existing network.",
+      "longDescription": "Use this cloud resource template to quickly provision a Red Hat Enterprise Linux bastion host on Amazon Web Services",
       "bullets": [
        {
          "title": "Clouds",
@@ -33,7 +33,7 @@
        },
        {
          "title": "Operating systems supported",
-         "description": "AWS: Ubuntu 14.04 LTS"
+         "description": "RHEL 7"
        },
        {
          "title": "Topology",
