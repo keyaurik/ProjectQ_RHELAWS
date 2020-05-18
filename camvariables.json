@@ -62,7 +62,7 @@
 			"name": "aws_image",
 			"type": "string",
 			"description": "AMI id / template that should be used when creating the virtual image",
-			"default": "ami-0f7122ac3de6f22b2",
+			"default": "ami-098f16afa9edf40be",
 			"hidden": false,
 			"label": "AMI ID",
 			"secured": false,
@@ -72,7 +72,7 @@
 			"name": "aws_image_size",
 			"type": "string",
 			"description": "AWS Image Instance Size",
-			"default": "t2.small",
+			"default": "t2.micro",
 			"hidden": false,
 			"label": "AWS Image Instance Size",
 			"secured": false,
@@ -89,7 +89,7 @@
 			"type": "string"
 		}, {
 			"description": "Subnet Name",
-			"default" : "default-us-east-1a",
+			"default" : "test_projectq2",
 			"hidden": false,
 			"immutable": false,
 			"label": "Subnet Name",
